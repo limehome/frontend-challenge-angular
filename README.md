@@ -77,5 +77,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 <hr />
 
-If you have any questions or feedback about the challenge, don't hesitate to reach out to us: tech-hiring@limehome.com
+If you have any questions or feedback about the challenge, don't hesitate to reach out to us!
 Good luck with the challenge! We are looking forward to your solution!
