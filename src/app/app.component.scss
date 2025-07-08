@@ -1,30 +1,259 @@
+/* Form container */
 .form {
   width: 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
+/* Accordion container */
+.accordion {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Accordion header (button) styles */
 .accordion__header {
-  margin: 0 0 16px 0;
-  padding: 16px;
-  border-top: 1px solid #798a69;
-  border-bottom: 1px solid #798a69;
-}
-.accordion__header:hover {
-  background: #eeeadc;
-}
-
-.form__elements {
   width: 100%;
-  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  margin: 0;
+  background: white;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
 }
 
+.accordion__header:hover {
+  background: #f8f9fa;
+}
+
+.accordion__header:focus {
+  background: #f8f9fa;
+  outline: 2px solid #798a69;
+  outline-offset: -2px;
+}
+
+.accordion__header[aria-expanded="true"] {
+  background: #798a69;
+  color: white;
+}
+
+.accordion__header[aria-expanded="true"]:hover {
+  background: #6b7a5a;
+}
+
+/* Accordion title */
+.accordion__title {
+  flex: 1;
+  font-weight: 600;
+}
+
+/* Accordion arrow icon */
+.accordion__arrow {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.accordion__header[aria-expanded="true"] .accordion__arrow {
+  color: white;
+}
+
+.accordion__arrow--rotated {
+  transform: rotate(180deg);
+}
+
+/* Accordion content */
+.accordion__content {
+  padding: 24px;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  animation: slideDown 0.2s ease;
+}
+
+.accordion__content.hidden {
+  display: none;
+}
+
+/* Form elements container */
+.form__elements {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.form__elements:last-child {
+  margin-bottom: 0;
+}
+
+/* Input group for label + input pairing */
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+/* Input field styles */
 .input {
   width: 100%;
-  margin: 0 0 5px 0;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background: white;
+  transition: all 0.2s ease;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
+.input:focus {
+  border-color: #798a69;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(121, 138, 105, 0.1);
+}
+
+.input::placeholder {
+  color: #9ca3af;
+}
+
+.input:invalid {
+  border-color: #ef4444;
+}
+
+.input:invalid:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Payment description */
 .form__payment {
-  display: block;
-  font-size: 18px;
-  line-height: 16px;
-  margin: 10px;
+  padding: 20px 24px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6b7280;
+  background: #f9fafb;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Submit button container */
+.form__submit {
+  padding: 24px;
+  background: white;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.btn--primary {
+  background: #798a69;
+  color: white;
+}
+
+.btn--primary:hover {
+  background: #6b7a5a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(121, 138, 105, 0.3);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(121, 138, 105, 0.3);
+}
+
+.btn--primary:focus {
+  outline: 2px solid #798a69;
+  outline-offset: 2px;
+}
+
+/* Responsive design for tablets and desktops */
+@media (min-width: 768px) {
+  .form__elements {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .input-group {
+    flex: 1;
+  }
+
+  .accordion__header {
+    padding: 24px 32px;
+    font-size: 18px;
+  }
+
+  .accordion__content {
+    padding: 32px;
+  }
+
+  .form__payment {
+    padding: 24px 32px;
+    font-size: 15px;
+  }
+
+  .form__submit {
+    padding: 32px;
+  }
+
+  .btn {
+    max-width: 200px;
+    width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .accordion__header {
+    padding: 28px 40px;
+    font-size: 20px;
+  }
+
+  .accordion__content {
+    padding: 40px;
+  }
+
+  .form__payment {
+    padding: 28px 40px;
+  }
+
+  .form__submit {
+    padding: 40px;
+  }
+}
+
+/* Animation for accordion content */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
