@@ -1,15 +1,13 @@
-import { TestBed, waitForAsync } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { addClass, removeClass } from './dom';
 
 describe('NotFoundComponent', () => {
   let functRemove = removeClass;
   let functAdd = addClass;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({}).compileComponents();
-    })
-  );
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({}).compileComponents();
+  });
 
   it('should add class', () => {
     let elem = document.createElement('div');
