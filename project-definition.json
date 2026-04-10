@@ -1,9 +1,9 @@
 {
-    "$schema": "https://hub.dev.limehome.com/schemas/project-definition-v2.schema.json",
-    "project": {
-        "name": "frontend-challenge-angular",
-        "type": "other",
-        "summary": "Frontend hiring challenge: mobile-first form, accessibility, accordion (Angular)",
-        "description": "Angular-based frontend challenge. Tasks: implement a mobile-first form from provided designs, improve accessibility (e.g. labels), and make the accordion work without console errors. Evaluates functionality, a11y, responsive design, and code quality. Design assets and arrow icon are in the repo."
-    }
+  "$schema": "https://hub.dev.limehome.com/schemas/project-definition-v2.schema.json",
+  "project": {
+    "name": "frontend-challenge-angular",
+    "type": "other",
+    "summary": "Frontend hiring challenge covering a mobile-first form, accessibility improvements, and accordion behavior",
+    "description": "Angular-based frontend challenge. Tasks: implement a mobile-first form from provided designs, improve accessibility (e.g. labels), and make the accordion work without console errors. Evaluates functionality, a11y, responsive design, and code quality. Design assets and arrow icon are in the repo."
+  }
 }
