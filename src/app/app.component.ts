@@ -5,7 +5,6 @@ import { addClass, hasClass, removeClass } from './utils/toggle-class/dom';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  standalone: false,
 })
 export class AppComponent {
   constructor(private elementRef: ElementRef) {
