@@ -44,7 +44,7 @@ Could be found in [assets](src/assets) folder.
 
 ### Pre-requsites to run the project
 
-* You have [Node](https://nodejs.org/en/download/) 24 LTS installed (see [.nvmrc](.nvmrc), e.g. `nvm use`)
+* You have [Node](https://nodejs.org/en/download/) 26 LTS installed (see [.nvmrc](.nvmrc), e.g. `nvm use`)
 * This project is in Angular. The [Angular CLI](https://angular.dev/tools/cli) comes with the project dependencies, no global install needed
 
 ```
